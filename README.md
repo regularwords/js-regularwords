@@ -1,1 +1,1 @@
-# js-regularwords
+# js-regular-words

@@ -1,21 +1,21 @@
 {
-  "name": "regularwords",
+  "name": "regular-words",
   "version": "0.0.0",
   "description": "",
-  "main": "lib/regularwords.js",
+  "main": "lib/regular-words.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/regularwords/js-regularwords.git"
+    "url": "git+https://github.com/RegularWords/js-regular-words.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/regularwords/js-regularwords/issues"
+    "url": "https://github.com/RegularWords/js-regular-words/issues"
   },
-  "homepage": "https://github.com/regularwords/js-regularwords#readme",
+  "homepage": "https://github.com/RegularWords/js-regular-words#readme",
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
