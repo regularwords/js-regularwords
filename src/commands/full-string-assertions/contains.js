@@ -1,4 +1,4 @@
-import {specialCharacters} from '../rules';
+import {specialCharacters} from '../commands';
 
 function mustHave(input) {
 	return `(?=.*${input})`;

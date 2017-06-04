@@ -1,5 +1,5 @@
 import './polyfills/String.startsWith';
-import regexBuilder from './builder';
+import regexBuilder from './regexBuilder';
 
 class RegularWords {
 	constructor(words) {

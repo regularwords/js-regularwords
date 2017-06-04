@@ -1,4 +1,4 @@
-import rules from './rules';
+import rules from './commands/commands';
 import {escapeRegex} from './utils';
 
 let lock = Object.keys(rules).map(num => rules[num].regex);
