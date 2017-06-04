@@ -20,6 +20,7 @@ export default function builder(words) {
 			if (m) {
 				understood = true;
 				regex.push(rules[i].callback(...m.splice(1).map(escapeRegex)));
+				break;
 			}
 		}
 
