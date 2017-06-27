@@ -1,5 +1,6 @@
 import lengths from './full-string-assertions/lengths';
 import contains from './full-string-assertions/contains';
+import match from './any-location/match';
 
 export let specialCharacters = {
 	'number': `\\d`,
@@ -21,7 +22,7 @@ function registerRule(callback, ...regexes) {
 	});
 }
 
-[...lengths, ...contains]
+[...lengths, ...contains, ...match]
 	.forEach(rule => {
 		registerRule(...rule);
 	});
