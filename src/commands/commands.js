@@ -3,11 +3,11 @@ import contains from './full-string-assertions/contains';
 import match from './any-location/match';
 
 export let specialCharacters = {
-	'number': `\\d`,
-	'digit': `\\d`,
-	'uppercase letter': `[A-Z]`,
-	'lowercase letter': `[a-z]`,
-	'letter': '[A-Za-z]'
+	'number': '\\d',
+	'digit': '\\d',
+	'uppercase letter': '[A-Z]',
+	'lowercase letter': '[a-z]',
+	'letter': '[A-Za-z]',
 };
 
 let rules = {};
@@ -17,8 +17,8 @@ function registerRule(callback, ...regexes) {
 	regexes.forEach(regex => {
 		rules[count++] = {
 			regex,
-			callback
-		}
+			callback,
+		};
 	});
 }
 

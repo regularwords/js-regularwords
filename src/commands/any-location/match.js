@@ -17,30 +17,30 @@ function maybe(input) {
 export default [
 	[
 		() => '^',
-		/^start of string/
+		/^start of string/,
 	],
 	[
 		() => '$',
-		/^end of string/
+		/^end of string/,
 	],
 	[
 		match,
-		/^match: (.*)$/
+		/^match: (.*)$/,
 	],
 	[
 		(count, type) => match(specialCharacters[type], count),
-		/^match (\d+) ([a-z ]+?)s?$/
+		/^match (\d+) ([a-z ]+?)s?$/,
 	],
 	[
 		matchAnyOfThese,
-		/^match any of these: (.*?)$/
+		/^match any of these: (.*?)$/,
 	],
 	[
 		maybe,
-		/^maybe: (.*?)$/
+		/^maybe: (.*?)$/,
 	],
 	[
 		(count, type) => match(specialCharacters[type], count),
-		/^maybe (\d+) ([a-z ]+?)s?$/
-	]
+		/^maybe (\d+) ([a-z ]+?)s?$/,
+	],
 ];
