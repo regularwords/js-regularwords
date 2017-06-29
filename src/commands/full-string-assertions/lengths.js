@@ -29,30 +29,30 @@ function lengthMustNotBeBetween(min, max) {
 export default [
 	[
 		lengthMustBe,
-		/^length must be (\d+)$/
+		/^length must be (\d+)$/,
 	],
 	[
 		lengthMustNotBe,
-		/^length must not be (\d+)$/
+		/^length must not be (\d+)$/,
 	],
 	[
 		lengthMustBeMoreThan,
-		/^length must be more than (\d+)$/
+		/^length must be more than (\d+)$/,
 	],
 	[
 		lengthMustBeAtLeast,
-		/^length must be at least (\d+)$/
+		/^length must be at least (\d+)$/,
 	],
 	[
 		lengthMustBeLessThan,
-		/^length must be less than (\d+)$/
+		/^length must be less than (\d+)$/,
 	],
 	[
 		lengthMustBeBetween,
-		/^length must be between (\d+) and (\d+)$/
+		/^length must be between (\d+) and (\d+)$/,
 	],
 	[
 		lengthMustNotBeBetween,
-		/^length must not be between (\d+) and (\d+)$/
-	]
+		/^length must not be between (\d+) and (\d+)$/,
+	],
 ];
