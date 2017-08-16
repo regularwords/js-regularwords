@@ -4,7 +4,9 @@ import regexBuilder from './regexBuilder';
 class RegularWords {
 	constructor(words) {
 		this.words = words;
-		this.regex = regexBuilder(words);
+		this.captureCount = 0;
+		this.captureMap = {};
+		this.regex = regexBuilder.call(this, words);
 	}
 
 	test(string) {

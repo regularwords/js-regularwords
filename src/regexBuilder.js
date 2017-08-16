@@ -19,7 +19,8 @@ export default function builder(words) {
 			let m = line.match(lock[i]);
 			if (m) {
 				understood = true;
-				regex.push(rules[i].callback(...m.splice(1).map(escapeRegex)));
+				// "this" is the instance of RegularWords
+				regex.push(rules[i].callback.call(this, ...m.splice(1).map(escapeRegex)));
 				break;
 			}
 		}
