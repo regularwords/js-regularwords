@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Boom</title>
+
+	<script src="lib/regular-words.js"></script>
+</head>
+<body>
+
+<script>
+	const regex = new RegularWords(
+		`
+			must have less than 3: a
+			must have less than 2: ã
+			must have less than 2: c
+			must have less than 2: e
+			must have less than 2: l
+			must have less than 4: m
+			must have less than 5: o
+			must have less than 2: t
+			start of string
+			match any of these: aãcelmot
+			end of string
+		`
+	);
+
+	// console.log(regex.regex);
+
+	// const blah = Reggo
+	// 	.mustHaveMoreThan(10).numbers
+	// 	.mustHaveMoreThan(4).from('asdfghjkl')
+	// 	.mustHaveMoreThan(4).of('6')
+	// 	.mustHaveLessThan(20).numbers
+	// 	.mustHaveLessThan(30).from('asdfghjkl')
+	// 	.mustHaveLessThan(50).of('6')
+	// 	.mustHaveExactly(4).from('asdfghjkl')
+	// 	.mustHaveExactly(4).of('123')
+	// 	// .mustHaveExactly('string')
+	// 	.mustHaveBetween(5, 10).from('1234567890')
+	// 	.mustHaveLengthOf(10)
+	// 	.mustHaveLengthMoreThan(10)
+	// 	.mustHaveLengthLessThan(10)
+	// 	.mustHaveLengthBetween(5, 10)
+	//
+	// 	.mustHave.lengthMoreThan(7)
+	// 	.mustHave.an.uppercaseLetter
+	// 	.mustHave.a.lowercaseLetter
+	// 	.mustHave.a.number
+
+	const built = RegularWords
+		.chain()
+		.mustHaveMoreThan(3, ...'asd')
+		.mustHave.lessThan(3).of('a')
+		.mustHave.moreThan(2).of('b')
+		.mustHave.length.moreThan(10)
+		.startOfString
+		.matches.moreThan(0).from(...'aãcelmot')
+		.matches
+		.endOfString
+		.create();
+
+	console.log(built);
+</script>
+
+</body>
+</html>

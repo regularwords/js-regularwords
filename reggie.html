@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	{
+		// const compilers = {
+		// 	mustHaveMoreThan({count, input}) {
+		// 		return `(?=(?:.*${input}){${count + 1}})`;
+		// 	},
+		// 	mustHaveLessThan({count, input}) {
+		// 		return `(?!(?:.*${input}){${count}})`;
+		// 	}
+		// };
+
+		// const supportsNumbers = (state) => {
+		// 	const number = {
+		// 		get() {
+		// 			state.input = '\\d';
+		// 			return state.next;
+		// 		}
+		// 	};
+		//
+		// 	return {
+		// 		number,
+		// 		numbers: number,
+		// 	};
+		// };
+		//
+		// const supportsUppercaseLetters = (state) => {
+		// 	const uppercaseLetter = {
+		// 		get() {
+		// 			state.input = '[A-Z]';
+		// 			return state.next;
+		// 		}
+		// 	};
+		//
+		// 	return {
+		// 		uppercaseLetter,
+		// 		uppercaseLetters: uppercaseLetter,
+		// 	};
+		// };
+
+		// const supportsOf = (state) => ({
+		// 	of(input) {
+		// 		state.input = input;
+		// 		state.input = input;
+		// 		return state.next;
+		// 	}
+		// });
+		//
+		// const supportsFrom = (state) => ({
+		// 	from(input) {
+		// 		state.input = input;
+		// 		return state.next;
+		// 	}
+		// });
+
+		// const supportsMoreThan = (state) => ({
+		// 	moreThan(count) {
+		// 		state.compiler = 'mustHaveMoreThan';
+		// 		state.count = count;
+		//
+		// 		const supports = {};
+		//
+		// 		Object.assign(
+		// 			supports,
+		// 			supportsFrom(state),
+		// 			supportsOf(state)
+		// 		);
+		//
+		// 		Object.defineProperties(supports, supportsNumbers(state));
+		// 		Object.defineProperties(supports, supportsUppercaseLetters(state));
+		//
+		// 		return supports;
+		// 	}
+		// });
+
+		// const supportsLessThan = (state) => ({
+		// 	lessThan(count) {
+		// 		state.compiler = 'mustHaveLessThan';
+		// 		state.count = count;
+		//
+		// 		const supports = {};
+		//
+		// 		Object.assign(
+		// 			supports,
+		// 			supportsFrom(state),
+		// 			supportsOf(state)
+		// 		);
+		//
+		// 		Object.defineProperties(supports, supportsNumbers(state));
+		// 		Object.defineProperties(supports, supportsUppercaseLetters(state));
+		//
+		// 		return supports;
+		// 	}
+		// });
+
+		// const Reggie = () => {
+		// 	const parts = [];
+		//
+		// 	const next = {
+		// 		get mustHave() {
+		// 			const state = {
+		// 				type: 'full-string-lookahead',
+		// 				count: null,
+		// 				input: null,
+		// 				next,
+		// 			};
+		//
+		// 			parts.push(state);
+		//
+		// 			return Object.assign(
+		// 				{},
+		// 				supportsMoreThan(state),
+		// 				supportsLessThan(state),
+		// 			);
+		// 		},
+		// 		create() {
+		// 			const compiled = parts.map((part) => {
+		// 				return compilers[part.compiler](part);
+		// 			});
+		//
+		// 			console.log(JSON.stringify(parts, null, 4));
+		// 			return new RegExp(compiled.join(''));
+		// 		}
+		// 	};
+		//
+		// 	return next;
+		// };
+		//
+		// window.Reggie = Reggie;
+	}
+
+	// const regex = Reggie()
+	// 	.mustHave.moreThan(0).numbers
+	// 	.mustHave.lessThan(5).numbers
+	// 	.mustHave.moreThan(0).uppercaseLetters
+	// 	.mustHave.lessThan(5).uppercaseLetters
+	// 	.create();
+	//
+	// console.log(regex);
+</script>
+
+</body>
+</html>
